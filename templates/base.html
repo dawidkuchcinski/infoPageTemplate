@@ -1,0 +1,94 @@
+<!doctype html>
+{% load bootstrap4 %} 
+{% load static %}
+{% load fontawesome_5 %}
+
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+        {% bootstrap_css %}
+        {% bootstrap_javascript jquery='full' %}
+        {% fontawesome_5_static %} 
+        <link href="{% static 'css/custom.css' %}" type="text/css" rel="stylesheet" />
+        <title>Tytuł do uzupełnienia {% block title %}{% endblock %}</title>
+    </head>
+    <body class="container bg-light">
+        <nav class="container fixed-top navbar navbar-expand-lg navbar-light bg-light p-4">
+            <a href="http://sieciorozwoj.pl" class="navbar-brand">
+              Sieciorozwoj.pl
+            </a>
+        </nav>
+        <nav class="w-100 fixed-top mt-5 navbar navbar-nav navbar-light bg-light">
+            <div class="container w-50">
+                <a href="{% url 'index' %}" class="nav-link text-secondary">
+                    <i class="fas fa-laptop"></i> Technologia
+                </a>
+                    <a href="#" class="nav-link text-secondary">
+                <i class="fas fa-book-open"></i> Kącik Kulturalny
+                </a>
+                <a href="#" class="nav-link text-secondary">
+                    <i class="fas fa-hands"></i> Offtop
+                </a>
+                <a href="#" class="nav-link text-secondary">
+                    <i class="fas fa-id-card"></i> CV
+                </a>
+            </div>
+        </nav>
+        <main class="pl-5 pr-5 pt-5 mt-5 container">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer class="container blue page-footer font-small pt-5">
+            <div class="pl-5 pr-5 text-md-left">
+                <div class="row">
+                    <div class="col-md-6 mt-md-0 mt-3">
+                        <h6 class="text-uppercase">Podziękowania</h6>
+                        <p>Chciałbym tutaj podziękować za świetną technologię, którą wykorzystałem do tworzenia tego bloga.<br> Linki zaraz obok.</p>
+                        <p>Namiary na mnie: <a class="nav-item p-0 m-0 text-secondary" href="mailto:dawid.kuchcinski@sieciorozwoj.pl">dawid.kuchcinski@sieciorozwoj.pl</a></p>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <h6 class="text-uppercase">Linki</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://twitter.com/HopelessSirens" class=" text-secondary">Hopless Sirens - Za wsparcie</a>
+                            </li>
+                            <li>
+                                <a href="https://getbootstrap.com/" class=" text-secondary">Bootstrap v4</a>
+                            </li>
+                            <li>
+                                <a href="https://jquery.com/" class=" text-secondary">JQuery</a>
+                            </li>
+                            <li>
+                                <a href="https://fontawesome.com/" class=" text-secondary">Font Awesome</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <h6 class="text-uppercase">&nbsp</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.pexels.com" class=" text-secondary">Pexels</a>
+                            </li>
+                            <li>
+                                <a href="https://www.mysql.com/" class=" text-secondary">MySQL</a>
+                            </li>
+                            <li>
+                                <a href="https://home.pl/" class=" text-secondary">Home.pl</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center pb-3">
+                © 2020 Copyright: Dawid Kuchciński
+            </div>
+        </footer> 
+        {% block scripts %}
+            <script src="{% static 'js/custom.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>
