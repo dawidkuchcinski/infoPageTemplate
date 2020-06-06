@@ -1,7 +1,6 @@
 <!doctype html>
 {% load bootstrap4 %} 
 {% load static %}
-{% load fontawesome_5 %}
 
 <html>
     <head>
@@ -11,7 +10,6 @@
 
         {% bootstrap_css %}
         {% bootstrap_javascript jquery='full' %}
-        {% fontawesome_5_static %} 
         <link href="{% static 'css/custom.css' %}" type="text/css" rel="stylesheet" />
         <title>Tytuł do uzupełnienia {% block title %}{% endblock %}</title>
     </head>
