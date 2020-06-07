@@ -1,5 +1,6 @@
 db.sqlite3
-infopagetemplate\__pycache__
-infopagetemplateapp\__pycache__
-infopagetemplateapp\migrations
-static\img
+infopagetemplateapp/__pycache__/
+infopagetemplateapp/migrations/
+static/img
+infopagetemplate/__pycache__/
+infopagetemplate/__pycache__/settings.cpython-37.pyc
