@@ -10,6 +10,7 @@ sudo apt-get install -y python3-pip apache2 libapache2-mod-wsgi-py3 git mc htop
 
 sudo pip3 install virtualenv
 
+cd ~
 mkdir ~/fake_wix
 cd ~/fake_wix
 
@@ -72,7 +73,7 @@ echo "<VirtualHost *:80>
         </Files>
     </Directory>
 
-    WSGIDaemonProcess infoPageTemplate python-home=/home/opr/fake_wix/fake_wixenv python-path=/home/opr/fake_wix
+    WSGIDaemonProcess infoPageTemplate python-home=/home/opr/fake_wix/fake_wixenv python-path=/home/opr/fake_wix/infoPageTemplate
     WSGIProcessGroup infoPageTemplate
     WSGIScriptAlias / /home/opr/fake_wix/infoPageTemplate/infopagetemplate/wsgi.py
 
