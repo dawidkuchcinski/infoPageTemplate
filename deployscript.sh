@@ -79,7 +79,7 @@ echo "<VirtualHost *:80>
 
 </VirtualHost>" > "/etc/apache2/sites-available/000-default.conf"
 
-chmod 664 /home/opr/fake_wix/infoPageTemplate/db.sqlite3
+chmod 777 /home/opr/fake_wix/infoPageTemplate/db.sqlite3
 chown :www-data /home/opr/fake_wix/infoPageTemplate/db.sqlite3
 chown :www-data /home/opr/fake_wix/infoPageTemplate
 
