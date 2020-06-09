@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
     <div class="row">
         <div class="col-6" name="pl1">
             {% if banPlhNb1 %}
                 {% for ban in banPlhNb1 %}
-                    <img src="{{ ban.ban_img }}" class="img-fluid"/>
+                    <img src="{% static 'img/' %}{{ ban.ban_img }}" class="img-fluid"/>
                 {% endfor %}
             {% endif %}
         </div>
         <div class="col-6" name="pl1">
             {% if banPlhNb2 %}
                 {% for ban in banPlhNb2 %}
-                    <img src="{{ ban.ban_img }}" class="img-fluid" />
+                    <img src="{% static 'img/' %}{{ ban.ban_img }}" class="img-fluid" />
                 {% endfor %}
             {% endif %}
         </div>
