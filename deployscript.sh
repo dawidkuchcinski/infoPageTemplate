@@ -8,6 +8,8 @@ su - opr
 sudo apt-get update
 sudo apt-get install -y python3-pip apache2 libapache2-mod-wsgi-py3 git mc htop
 
+sudo source /etc/apache2/envvars
+
 sudo pip3 install virtualenv
 
 cd ~
@@ -64,6 +66,11 @@ echo "<VirtualHost *:80>
 
     Alias /static /home/opr/fake_wix/infoPageTemplate/static
     <Directory /home/opr/fake_wix/infoPageTemplate/static>
+        Require all granted
+    </Directory>
+
+    Alias /media /home/opr/fake_wix/infoPageTemplate/media
+    <Directory /home/opr/fake_wix/infoPageTemplate/media>
         Require all granted
     </Directory>
 
